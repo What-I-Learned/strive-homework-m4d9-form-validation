@@ -1,26 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Books from "./data/history.json";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import MyNavbar from "./components/MyNavbar";
-import MyFooter from "./components/MyFooter";
-import MyWelcomeJumbo from "./components/WelcomeJumbo";
-import BookList from "./components/BookList";
-import CommentArea from "./components/CommentArea";
+import Home from "./components/Home";
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
     <div className="bookstore-container">
-      <header className="bookstore-header">
-        <MyNavbar title="History for the mind" color="light" />
-        <MyWelcomeJumbo />
-      </header>
-      <main>
-        <BookList booklist={Books} />
-        <CommentArea />
-      </main>
-      <footer className="w-100"></footer>
+      <Router>
+        {/* <Route path="/" exact component={Home} /> */}
+        <Route path="/user" exact component={UserForm} />
+      </Router>
     </div>
   );
 }

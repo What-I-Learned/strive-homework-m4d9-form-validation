@@ -1,3 +1,27 @@
+.registration-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.form-container {
+  border-radius: 10px;
+  width: 20%;
+}
+.form-data {
+  min-width: 300px;
+  background-color: aliceblue;
+}
+.form-image {
+  min-width: 300px;
+  height: 100%;
+  overflow: hidden;
+}
+.form-image img {
+  width: 100%;
+  height: auto;
+}
 .bookstore-nav {
   top: 1rem;
   border-radius: 50px;
